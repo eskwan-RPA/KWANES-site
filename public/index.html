@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio — projects, skills, and ways to get in touch." />
+  <title>Your Name — Portfolio</title>
+
+  <!-- Open Graph (helps when the link is shared with recruiters) -->
+  <meta property="og:title" content="Your Name — Portfolio" />
+  <meta property="og:description" content="Personal portfolio — projects, skills, and ways to get in touch." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#hero">YN</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#repos">Repos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero reveal">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Hello, I'm</p>
+        <h1 class="hero__name">Your Name</h1>
+        <p class="hero__tagline">One-line professional tagline — e.g. "Software engineer building reliable, human-centred tools."</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="mailto:2570466@sit.singaporetech.edu.sg">Email me</a>
+          <a class="btn btn--ghost" href="https://github.com/eskwan-RPA" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#about" aria-label="Scroll to About">↓</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">01</span> About</h2>
+        <div class="about">
+          <p class="about__lead">
+            Short professional bio goes here. Two or three sentences: who you are, what you focus on,
+            and what you're looking for. Keep it warm and specific — recruiters skim this first.
+          </p>
+          <p>
+            A second paragraph (optional) for context — your background, a recent achievement, or the
+            kinds of problems you enjoy solving.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">02</span> Skills &amp; Focus</h2>
+        <div class="skills">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="tags">
+              <li>JavaScript</li><li>Python</li><li>TypeScript</li><li>SQL</li><li>HTML &amp; CSS</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks &amp; Tools</h3>
+            <ul class="tags">
+              <li>Node.js</li><li>React</li><li>Git</li><li>Docker</li><li>REST APIs</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Areas of Focus</h3>
+            <ul class="tags">
+              <li>Web Development</li><li>Automation</li><li>Data</li><li>UI/UX</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">03</span> Selected Projects</h2>
+        <div class="grid grid--projects">
+          <article class="card project">
+            <h3 class="project__title">Project One</h3>
+            <p class="project__desc">One-line description of what it does and why it's interesting.</p>
+            <a class="card__link" href="#" target="_blank" rel="noopener noreferrer">View project →</a>
+          </article>
+          <article class="card project">
+            <h3 class="project__title">Project Two</h3>
+            <p class="project__desc">One-line description of what it does and why it's interesting.</p>
+            <a class="card__link" href="#" target="_blank" rel="noopener noreferrer">View project →</a>
+          </article>
+          <article class="card project">
+            <h3 class="project__title">Project Three</h3>
+            <p class="project__desc">One-line description of what it does and why it's interesting.</p>
+            <a class="card__link" href="#" target="_blank" rel="noopener noreferrer">View project →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPOS (fetched live) -->
+    <section id="repos" class="section section--alt reveal">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">04</span> Latest on GitHub</h2>
+        <p class="section__subtitle">My most recently updated public repositories.</p>
+        <div id="repos-grid" class="grid grid--repos" aria-live="polite" aria-busy="true">
+          <!-- Cards injected by main.js -->
+          <p class="repos__status">Loading repositories…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <div class="container contact">
+        <h2 class="section__title"><span class="section__num">05</span> Get in touch</h2>
+        <p class="contact__lead">
+          I'm open to opportunities and happy to chat. The fastest way to reach me is email.
+        </p>
+        <div class="contact__links">
+          <a class="btn btn--primary" href="mailto:2570466@sit.singaporetech.edu.sg">2570466@sit.singaporetech.edu.sg</a>
+          <a class="btn btn--ghost" href="https://github.com/eskwan-RPA" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© <span id="year"></span> Your Name</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
